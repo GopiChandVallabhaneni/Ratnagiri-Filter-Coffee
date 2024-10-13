@@ -1,0 +1,559 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+header {
+    background: rgb(0, 0, 0); /* Opaque background when not scrolling */
+    color: rgb(241, 3, 3);
+    text-align: left;
+    padding: 100px;
+    transition: background 0.5s; /* Smooth transition */
+    position: relative; /* Keep header at the top */
+    top: 0;
+    width: 150%;
+    z-index: 1000; /* Ensure it stays above other elements */
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+header h1{
+    margin-left: 300px; /* Adjust to control distance from the left */
+    text-align: center;  /* Align text to the left side */
+    font-size: 2rem; 
+}
+
+.menu-heading{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 80px;
+    font-weight: bold;
+}
+
+.logojpg {
+    position: fixed;
+    float: right;
+    margin: 10px auto;
+    width: 8%; /* Set the width to a smaller size */
+    height: auto; /* Keeps the aspect ratio */
+    top: 0px;
+    transition: background 0.5s;
+}
+
+
+
+/* Make header transparent when scrolling */
+header.transparent {
+    background: rgba(249, 88, 24, 0.5); /* Transparent background when scrolling */
+}
+
+.header {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Aligns the navigation options to the right */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+/* Link styling */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    position: relative;
+    padding: 10px;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+/* Hover effects */
+.nav-links a:hover {
+    color: #f0f0f0;
+}
+
+/* Underline effect */
+.nav-links a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* Optional: Sticky header */
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    z-index: 1000;
+    width: 100%;
+}
+
+main {
+    padding: 100px;
+    margin-top: 100px; /* Adjust for fixed header height */
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds space between menu items */
+    padding: 100px;
+    font-size: 1em;
+    text-align: center;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item.reverse {
+    flex-direction: row-reverse; /* Reverses the order of the image and description */
+}
+
+.menu-image {
+    width: 180px; /* Adjust this width to control the size of the images */
+    height: auto;
+    border-radius: 20px;
+    margin: 0 80px;
+    margin-right: 50px;
+    transition: transform 0.3s ease; 
+}
+
+.menu-item.reverse .menu-image {
+    margin-right: 0;
+    margin-left: 20px; /* Adjust spacing for reversed items */
+    margin: 0 80px;
+}
+
+.menu-description {
+    flex: 1; /* Allows the description to take up the remaining space */
+    transition: transform 0.3s ease, color 0.3s ease;
+    margin-top: 15px;
+    flex: 2;
+}
+
+.menu-description h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Hover effect to scale up image and highlight description */
+.menu-item:hover .menu-image {
+    transform: scale(1.1); /* Scale image up on hover */
+}
+
+.menu-item:hover .menu-description h3 {
+    color: #f95818; /* Change color on hover */
+    transform: scale(1.1); /* Scale heading on hover */
+}
+
+.menu-item:hover {
+    color: rgb(255, 255, 255);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow effect */
+    transform: scale(1.02); /* Slightly scale the entire section */
+}
+
+.menu-description p {
+    font-size: 1.1em;
+    line-height: 0.5;
+}
+
+/* Responsive Design: Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-item.reverse {
+        flex-direction: column;
+    }
+
+    .menu-image {
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+
+/* Gallery section */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top: -120px;
+}
+
+.gallery-item {
+    text-align: center;
+    margin: 10px;
+    width: 200px;
+    position: relative;
+}
+.divider {
+    height: 2px; /* Thickness of the line */
+    background-color: rgba(255, 255, 255, 0.5); /* Line color (white with transparency) */
+    margin: 10px 0; /* Space around the divider */
+    width: 100%; /* Full width of the container */
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 0px;
+    align-items: 0px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    box-shadow: 0 4px 15px rgb(255, 255, 255); /* Add shadow effect */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.gallery p {
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center the gallery items */
+    }
+
+    .gallery-item {
+        width: 100%; /* Make the gallery item take full width on small screens */
+        max-width: 400px; /* Optional: Limit the max width for large images */
+    }
+}
+
+
+.menu {
+    background: #002741;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(252, 252, 252, 0.737);
+    margin-bottom: 40px;
+}
+
+.menu h2, .menu h3 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+/* about section*/
+
+.about-section {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+}
+
+.about-heading{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+
+.about h2 {
+    font-size: 3em; /* Increase this value as needed */
+    font-weight: bold; /* Ensure it's bold for emphasis */
+    margin-bottom: 20px; /* Add space below the heading */
+    text-align: center; /* Center the heading */
+}
+
+
+/* Top image covering half the page */
+.about-image {
+    width: 100%;
+    height: 50vh; /* Half of the viewport height */
+    object-fit: cover; /* Make sure image covers the entire area */
+    border-radius: 10px;
+    box-shadow: #ffffff;
+}
+
+/* Content styling for the text */
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px; /* Space between the image and content */
+}
+
+/* Left side with large heading */
+.about-left {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-left h1 {
+    font-size: 3em; /* Large heading */
+    font-weight: bold;
+    margin: 0;
+    color: #ffffff; /* Heading color */
+}
+
+/* Right side with description */
+.about-right {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.about-right p {
+    font-size: 1.2em; /* Font size for the description */
+    line-height: 1.6;
+    color: #ff0000; /* Text color */
+    margin-bottom: 20px;
+    font-style: oblique;
+    color: inherit; /* Ensure icons inherit the color */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack the content vertically on small screens */
+    }
+    .about-left, .about-right {
+        padding: 0;
+    }
+}
+
+/* CONTACT SECTION*/
+
+.contact-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 40px;
+    background-color: #002741; /* White background for the contact section */
+    box-shadow: 0 2px 10px rgba(193, 193, 193, 0.838);
+    border-radius: 10px;
+
+}
+
+.contact-info {
+    flex: 1;
+    margin-right: 20px; /* Space between info and form */
+    color: #f0f0f0;
+}
+
+.info {
+    margin-top: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #f0f0f0;
+}
+
+.info-item i {
+    margin-right: 10px; /* Space between icon and text */
+    color: rgb(219, 25, 25); /* Black color for icons */
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form h3 {
+    margin-bottom: 20px;
+    color: #f0f0f0;
+    
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background: rgb(254, 252, 252);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: rgb(131, 201, 84); /* Darker shade on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column; /* Stack contact info and form on small screens */
+    }
+    .contact-info, .contact-form {
+        margin-right: 0; /* Remove right margin for small screens */
+        margin-bottom: 20px; /* Space between sections */
+    }
+}
+
+.contact-section {
+    max-width: 1200px; /* Limit width for better layout */
+    padding: 20px; /* Padding inside the section */
+    background-color: #012441; /* White background for the section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgb(248, 248, 248); /* Subtle shadow */
+}
+
+.contact-info {
+    margin-bottom: 30px; /* Space below contact info */
+}
+
+.contact-info h3 {
+    margin-bottom: 15px; /* Space below heading */
+    font-size: 24px; /* Heading size */
+    color: #fdfeff; /* Heading color */
+}
+
+.info {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+}
+
+.info-item {
+    display: flex; /* Align icon and text */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 10px; /* Space between info items */
+}
+
+.info-item i {
+    margin-right: 20px; /* Space between icon and text */
+    color: #eceef1; /* Icon color */
+    font-size: 20px; /* Icon size */
+}
+
+.info-item a {
+    color: #fafcff; /* Set your desired email link color */
+    text-decoration: none; /* Optional: Remove underline */
+}
+
+.info-item a:hover {
+    color: #ff5733; /* Change color on hover */
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+
+.contact-form {
+    margin-bottom: 30px; /* Space below the form */
+}
+
+.contact-form h3 {
+    margin-bottom: 15px; /* Space below heading */
+}
+
+.contact-form form {
+    display: flex; /* Use flexbox for form layout */
+    flex-direction: column; /* Stack inputs vertically */
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px; /* Padding inside input and textarea */
+    margin-bottom: 15px; /* Space below inputs */
+    border: 1px solid #ccc; /* Border around inputs */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.contact-form button {
+    padding: 10px; /* Padding inside button */
+    background-color: #007bff; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.contact-form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Social Media Styles */
+.social-media {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    margin: 20px 0; /* Margin around the social media section */
+    align-items: center;
+    left: 10px;
+    bottom: 20px;
+    position: relative;
+}
+
+.social-icon {
+    margin: 0 10px; /* Space between icons */
+    font-size: 30px; /* Size of the icons */
+    color: #f5f5f5; /* Color of the icons */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+    margin-right: 50px;
+}
+
+.social-icon i {
+    color: inherit; /* Ensure icons inherit the color */
+    color: #f5f5f5;
+}
+
+.social-icon:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #663d2d;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratnagiri filter coffee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="header">RATNAAGIRI FILTER COFFEE</h1>
+        <img src="images/logojpg.jpg" alt="logo" class="logojpg">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Our Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="gallery">
+            <div class="gallery-item">
+                <img src="images/TEA3.jpeg" alt="Coffee 1" class="fade-in">
+                <p>TEA</p>
+                <div class="divider"></div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/sandwichpng.avif" alt="Sandwich" class="fade-in">
+                <p>SANDWICH</p>
+                <div class="divider"></div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/milkshakepng.jpeg" alt="Milkshake" class="fade-in">
+                <p>MILK SHAKES</p>
+                <div class="divider"></div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img2.jpeg" alt="Coffee 2" class="fade-in">
+                <p>COFFEE</p>
+                <div class="divider"></div>
+            </div>
+        </section>
+
+        <!-- First menu section -->
+        <section id= "menu" class="menu">
+           
+            <h2 class="menu-heading">Our Menu</h2>
+            
+            <div class="menu-item">
+                <img src="images/coff1.jpg" alt="Coffee" class="menu-image">
+                <div class="menu-description">
+                    <h3>Coffee</h3>
+                    <p>Filter Coffee - 25/-</p>
+                    <p>Large Filter Coffee - 35/-</p>
+                    <p>Sonti Coffee - 30/-</p>
+                    <p>Sonti Milk - 20/-</p>
+                    <p>Boost - 20/-</p>
+                    <p>Horlicks - 20/-</p>
+                    <p>Hot Badam - 20/-</p>
+                    <p>Hot Pista - 20/-</p>
+                 <div class="divider"></div>
+                </div>
+            </div>
+            <div class="menu-item reverse">
+                <img src="images/tea2.jpg" alt="Tea" class="menu-image">
+                <div class="menu-description">
+                    <h3>Tea</h3>
+                    <p>Tea - 10/-</p>
+                    <p>Large Tea - 15/-</p>
+                    <p>Ginger Tea - 15/-</p>
+                    <p>Black Tea - 15/-</p>
+                    <p>Green Tea - 15/-</p>
+                    <p>Masala Tea - 20/-</p>
+                    <p>Elachi Tea - 20/-</p>
+                    <p>Pepper Tea - 20/-</p>
+                    <div class="divider"></div>
+                </div>
+            </div>
+            
+            <div class="menu-item">
+                <img src="images/shakes.jpg" alt="Milkshake" class="menu-image">
+                <div class="menu-description">
+                    <h3>Milkshakes</h3>
+                    <p>Cold Coffee - 69/-</p>
+                    <p>Butter Scotch - 69/-</p>
+                    <p>Strawberry - 69/-</p>
+                    <p>Cold Chocolate - 69/-</p>
+                    <p>Orea Milk Shake - 69/-</p>
+                    <p>Mojito - 69/-</p>
+                    <p>Green Mint Mojito - 69/-</p>
+                    <p>Blue Curacao Mojito - 69/-</p>
+                    <div class="divider"></div>
+                </div>
+            </div>
+            
+            
+            <div class="menu-item reverse">
+                <img src="images/sandwich.jpg" alt="Snacks" class="menu-image">
+                <div class="menu-description">
+                    <h3>Snacks</h3>
+                    <p>Samosa  - 20/-</p>
+                    <p>Veg Puff - 20/-</p>
+                    <p>Egg Puff - 25/-</p>
+                    <p>Biscuit - 4/-</p>
+                    <p>Tost - 5/-</p>
+                    <div class="divider"></div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Second menu section -->
+        <section id="about" class="menu">
+            <h3 class="about-heading">About Us</h3>
+            <section class="about-section">
+                <img src="images/abimg.webp" alt="About Us Image" class="about-image">
+                <div class="about-content">
+                    <div class="about-left">
+                        <h1>About Our Coffee Shop</h1>
+                    </div>
+                    <div class="about-right">
+                        <p>We pride ourselves in serving the finest coffee, brewed with passion and care. From rich espressos to creamy lattes, every cup is crafted to perfection. Our mission is to bring people together over coffee and create memorable experiences.</p>
+                        <p>Our team is dedicated to sourcing the best ingredients and delivering exceptional customer service. Join us in our cozy shop, where each visit is a journey through flavors, aromas, and the comfort of your favorite cup.</p>
+                    </div>
+                </div>
+                <style>
+                    /* Your existing styles go here */
+            
+                    /* Paste the updated CSS here */
+                    .about-right {
+                        flex: 1;
+                        padding-left: 20px;
+                        text-align: justify;
+                        max-width: 500px;
+                        margin: 0 auto;
+                    }
+            
+                    .about-right p {
+                        font-size: 1.2em;
+                        line-height: 1.6;
+                        color: #555;
+                        margin-bottom: 20px;
+                        text-align: justify;
+                        hyphens: auto;
+                    }
+            
+                    @media (max-width: 768px) {
+                        .about-content {
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                        .about-left, .about-right {
+                            padding: 0;
+                            text-align: center;
+                        }
+                        .about-right {
+                            max-width: 100%;
+                        }
+                    }
+                </style>
+            </section>
+        </section>
+
+        <section class="contact-section">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <div class="info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Address: MIG-299, near UCO Bank, K P H B Phase 1, Kukatpally, Hyderabad, Telangana 500085</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>Phone: +91 6303719920</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>Email: <a href="mailto:prabhakar11pragada@gmail.com">prabhakar11pragada@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send Message</h3>
+                <form>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Type your Message..." required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        
+            <!-- Social Media Icons -->
+            <div class="social-media">
+                <a href="https://wa.me/916303719920" target="_blank" class="social-icon" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/prabhakar_pragada?igsh=MmJvMHFzajNtYTh0" target="_blank" class="social-icon" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/YOUR_PAGE" target="_blank" class="social-icon" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com/YOUR_USERNAME" target="_blank" class="social-icon" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Include Font Awesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        
+        <style>
+            /* Add your existing CSS here */
+            
+            .social-media {
+                display: flex;
+                justify-content: center; /* Center the icons horizontally */
+                margin: 20px 0; /* Margin around the social media section */
+
+            }
+        
+            .social-icon {
+                margin: 0 10px; /* Space between icons */
+                font-size: 30px; /* Size of the icons */
+                color: #4b3d3d; /* Color of the icons */
+                text-decoration: none; /* Remove underline from links */
+                transition: color 0.3s; /* Smooth transition for hover effect */
+            }
+        
+            .social-icon:hover {
+                color: #007bff; /* Change color on hover */
+            }
+        </style>
+        
+
+    </main>
+    <footer>
+        <p>© 2024 Coffee Shop. All Rights Reserved.</p>
+    </footer>
+
+<script>
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    function setActiveLink() {
+        let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+        navLinks.forEach(link => {
+            const section = document.querySelector(link.getAttribute('href'));
+            if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                link.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', setActiveLink);
+    window.addEventListener('DOMContentLoaded', setActiveLink); // Check on page load
+</script>
+<script>
+// Get all navigation links
+const navLink = document.querySelectorAll('.nav-links a');
+
+// Add click event to each link to make it active
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        // Remove active class from all links
+        navLinks.forEach(link => link.classList.remove('active'));
+
+        // Add active class to the clicked link
+        this.classList.add('active');
+    });
+});
+
+</script>
+
+<script>
+    document.querySelector('.contact-form form').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const name = this.querySelector('input[type="text"]').value;
+        const email = this.querySelector('input[type="email"]').value;
+        const message = this.querySelector('textarea').value;
+
+        if (name && email && message) {
+            // Here you could add an AJAX call to send data to the server
+            alert('Thank you for your message, ' + name + '!');
+            this.reset(); // Reset the form fields
+        } else {
+            alert('Please fill in all fields.');
+        }
+    });
+</script>
+
+<script>
+    document.querySelector('#contactForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const name = this.querySelector('input[type="text"]').value;
+        const email = this.querySelector('input[type="email"]').value;
+        const message = this.querySelector('textarea').value;
+
+        // Construct the WhatsApp link
+        const phoneNumber = '916303719920'; // Replace with your WhatsApp number
+        const whatsappMessage = `Hello, I am ${name}. My email is ${email}. Message: ${message}`;
+        const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+        // Open WhatsApp link
+        window.open(whatsappLink, '_blank');
+
+        this.reset(); // Reset the form fields
+    });
+</script>
+
+</body>
+</html>
